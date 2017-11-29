@@ -8,6 +8,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,6 +27,13 @@ public class NullCraft
  //logger init
  public static Logger logger = LogManager.getLogger(reference.MOD_NAME);
 
+ //CreativeTab Init
+ public static CreativeTabs tabNullcraft = new CreativeTabs("tabNullcraft") {
+  @Override
+  public Item getTabIconItem() {
+   return Items.nether_star;
+  }
+ };
 
  @EventHandler
  public void preInit(FMLPreInitializationEvent event)
