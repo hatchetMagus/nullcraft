@@ -41,8 +41,8 @@ public class NullCraft
   logger.info("Hello! -- THIS IS PRE_INIT PHASE");
   //Load Config Stuff
   NullcraftConfig.init(new File(event.getModConfigurationDirectory(), "nullcraft.cfg"));
-
-  proxy.proxyPreInit(event);
+  GameObjects.initGameObjects();
+  //proxy.proxyPreInit(event);
  }
 
  @EventHandler

@@ -1,6 +1,8 @@
 package net.fluxdoctor.nullcraft.content.blocks;
 
 import net.fluxdoctor.nullcraft.content.base.NullBlock;
+import net.fluxdoctor.nullcraft.content.tile.TileEffect;
+import net.fluxdoctor.nullcraft.core.reference;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
@@ -9,22 +11,20 @@ import net.minecraft.world.World;
 public class GrowthPlus extends NullBlock implements ITileEntityProvider
 {
 
- private int BlockTier;
+ private int cd;
 
- public GrowthPlus(Material material, String name, int tier)
+ public GrowthPlus(Material material, String name, int cooldown)
  {
   super(material);
   this.setBlockName(name);
-  this.BlockTier = tier;
+  this.cd = cooldown;
+
+  this.setBlockTextureName(reference.MOD_ID + ":" + name);
  }
 
- public int getBlockTier()
- {
-  return this.BlockTier;
- }
 
  @Override
  public TileEntity createNewTileEntity(World world, int meta) {
-  return null;
+  return new TileEffect(true, cd);
  }
 }
