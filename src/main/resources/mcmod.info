@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "nullcraft",
+    "name": "NullCraft",
+    "description": "Everyting, and maybe the kitchen sink too...",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Flux_Doctor"
+    ],
+    "credits": "All the modders... All of them for all of the inspiration. LexManos and the Forge Team :) For the wonderful modding API",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

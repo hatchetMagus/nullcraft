@@ -33,6 +33,9 @@ archivesBaseName = config.mod_name
 minecraft {
     version = config.mc_version + "-" + config.forge_version
     runDir = "run"
+
+    replace "@@MOD_VERSION@@", project.version
+    replaceIn "net/fluxdoctor/nullcraft/core/reference.java"
 }
 
 dependencies {
